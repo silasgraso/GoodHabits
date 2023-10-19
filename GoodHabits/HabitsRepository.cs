@@ -19,6 +19,7 @@ namespace GoodHabits
 
         public Habit Create(Habit habit)
         {
+            habit.Validate();
             habit.Id = _nextId++;
             _habits.Add(habit);
             return habit;
